@@ -19,7 +19,7 @@ class LoginController extends Controller
         if (auth()->check()) {
             return redirect()->route('home.page');
         } else {
-            $response = Http::get('http://localhost/obtener-publicidades');
+            $response = Http::get('http://admin.labcofasa.net/obtener-publicidades');
             $publicidades = $response->json();
 
             $response = response()->view('auth.login', compact('publicidades'));
