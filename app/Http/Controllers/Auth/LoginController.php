@@ -43,7 +43,7 @@ class LoginController extends Controller
 
         if ($username && $password) {
             try {
-                $user = User::on('DB_CONNECTION_LABORATORIOS_COFASA')->where('email', $username)->orWhere('name', $username)->firstOrFail();
+                $user = User::on('DB_CONNECTION_LABORATORIOS_COFASA')->where('email', $username)->orWhere('nombre', $username)->firstOrFail();
 
                 if ($user->estado) {
                     if (Hash::check($password, $user->password)) {
