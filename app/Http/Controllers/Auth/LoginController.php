@@ -4,13 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
-use App\Models\Publicidad;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Composer;
 
 class LoginController extends Controller
 {
